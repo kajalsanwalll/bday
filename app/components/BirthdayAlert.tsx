@@ -16,9 +16,9 @@ export default function BirthdayAlert() {
       <div className="mx-4 max-w-md rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 p-8 text-center shadow-2xl">
         
         <p className="text-lg font-medium text-white">
-          Unfortunately I remember dates!  
+          Unfortunately she remembers dates!  
           <br />
-          "Isn't she amazing?"."
+          "Isn't she amazing?"
         </p>
 
         <button

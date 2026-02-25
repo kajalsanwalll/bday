@@ -35,7 +35,7 @@ const stats = [
   },
   {
     label: "Immaturity level",
-    value: "works too hard but blushes out when ppl compliment",
+    value: "Works too hard but blushes out when ppl compliment",
   },
 ];
 
@@ -122,7 +122,7 @@ export default function RivalStats() {
                 alt="rival"
                 width={350}
                 height={350}
-                className="rounded-2xl object-cover border border-white/10 shadow-xl transition duration-500 group-hover:scale-105"
+                className="rounded-2xl mb-7  object-cover border border-white/10 shadow-xl transition duration-500 group-hover:scale-105"
               />
 
               {/* subtle glow */}
@@ -140,7 +140,11 @@ export default function RivalStats() {
 
           <p className="mt-6 text-slate-300 leading-relaxed">
             I genuinely feel BLESSED that I got to know the version of you
-            which idk why you're scared to show? Lol! You inspire a lot,
+            which idk why you're scared to show? Lol!
+          </p>
+
+          <p className="mt-6 text-slate-300 leading-relaxed">
+            You inspire a lot,
             may you enjoy great success in life.
           </p>
 
@@ -150,7 +154,7 @@ export default function RivalStats() {
           </p>
 
           <p className="mt-4 text-slate-300 leading-relaxed">
-            AND I love gossiping with you because you LISTEN AND REMEMBER.
+            AND I love gossiping with you because you LISTEN and REMEMBER.
           </p>
 
           <p className="mt-4 text-slate-400 leading-relaxed">
