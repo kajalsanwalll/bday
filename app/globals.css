@@ -24,3 +24,18 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* soft radial glow */
+body {
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(139, 92, 246, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(99, 102, 241, 0.12),
+      transparent 40%
+    ),
+    #020617;
+}
