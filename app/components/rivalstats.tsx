@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const stats = [
@@ -40,6 +40,8 @@ const stats = [
 ];
 
 export default function RivalStats() {
+  const [feedbackText, setFeedbackText] = useState("Click here to leave a review");
+
   useEffect(() => {
     const glow = document.getElementById("cursor-glow");
     if (!glow) return;
@@ -48,7 +50,6 @@ export default function RivalStats() {
     let mouseY = 0;
     let currentX = 0;
     let currentY = 0;
-
     const speed = 0.06;
 
     const moveMouse = (e: MouseEvent) => {
@@ -59,7 +60,6 @@ export default function RivalStats() {
     const animate = () => {
       currentX += (mouseX - currentX) * speed;
       currentY += (mouseY - currentY) * speed;
-
       glow.style.transform = `translate(${currentX}px, ${currentY}px)`;
       requestAnimationFrame(animate);
     };
@@ -70,9 +70,12 @@ export default function RivalStats() {
     return () => window.removeEventListener("mousemove", moveMouse);
   }, []);
 
+  const handleFeedbackClick = () => {
+    setFeedbackText("Do you think I need your feedback? lol");
+  };
+
   return (
     <section className="relative min-h-screen text-slate-200 overflow-hidden px-6 py-24">
-      
       {/* dreamy background wash */}
       <div className="absolute inset-0 bg-gradient-to-b from-pink-900/20 via-transparent to-rose-950/20 pointer-events-none" />
 
@@ -89,7 +92,7 @@ export default function RivalStats() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-bold text-center mb-14 bg-gradient-to-r from-pink-300 to-fuchsia-300 bg-clip-text text-transparent"
         >
-         Pros or cons?
+          Pros or cons?
         </motion.h2>
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -122,18 +125,11 @@ export default function RivalStats() {
                 alt="rival"
                 width={350}
                 height={350}
-                className="rounded-2xl mb-7  object-cover border border-white/10 shadow-xl transition duration-500 group-hover:scale-105"
+                className="rounded-2xl mb-7 object-cover border border-white/10 shadow-xl transition duration-500 group-hover:scale-105"
               />
-
-              {/* subtle glow */}
               <div className="absolute inset-0 rounded-2xl bg-pink-400/10 blur-xl opacity-0 group-hover:opacity-100 transition" />
-
-              <div
-                className="pointer-events-none absolute -bottom-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition duration-300"
-              >
-                <span className="text-xs text-slate-400 italic">
-                  what a nerd!
-                </span>
+              <div className="pointer-events-none absolute -bottom-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition duration-300">
+                <span className="text-xs text-slate-400 italic">what a nerd!</span>
               </div>
             </div>
           </div>
@@ -160,6 +156,20 @@ export default function RivalStats() {
           <p className="mt-4 text-slate-400 leading-relaxed">
             So yeah… happy birthday. Don’t let it get to your head.
           </p>
+        </div>
+      </section>
+
+      {/* REVIEW SECTION */}
+      <section className="relative z-10 mt-16">
+        <div className="mx-auto max-w-2xl rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 p-8 shadow-2xl text-center">
+          <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">Honest Review</h3>
+          <input
+            type="text"
+            value={feedbackText}
+            onClick={handleFeedbackClick}
+            readOnly
+            className="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-slate-200 placeholder-slate-400 focus:outline-none cursor-pointer"
+          />
         </div>
       </section>
 
