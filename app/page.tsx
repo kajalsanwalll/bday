@@ -1,11 +1,13 @@
 import Hero from "./components/hero";
 import RivalStats from "./components/rivalstats";
+import BirthdayAlert from "./components/BirthdayAlert";
 
 export default function Home() {
   return (
-    <main>
+    <>
+      <BirthdayAlert />
       <Hero />
       <RivalStats />
-    </main>
+    </>
   );
 }

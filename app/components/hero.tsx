@@ -22,15 +22,15 @@ export default function Hero() {
         className="relative z-10 text-center max-w-2xl bg-white/5 backdrop-blur-xl rounded-3xl p-10 border border-white/10 shadow-2xl"
       >
         <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
-          Happy Birthday!
+          Happiest Birthday!
         </h1>
 
         <p className="mt-6 text-lg md:text-xl text-slate-300">
-          Bet you couldnt have imagined!
+          Wish you get everything you wish for!
         </p>
 
         <p className="mt-3 text-sm text-slate-500">
-          (unfortunately i remember dates!)
+          (with reasonable restrictions)
         </p>
       </motion.div>
     </section>
