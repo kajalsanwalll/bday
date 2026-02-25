@@ -18,14 +18,14 @@ export default function BirthdayAlert() {
         <p className="text-lg font-medium text-white">
           Unfortunately I remember dates!  
           <br />
-          Isn't she amazing?
+          "Isn't she amazing?"."
         </p>
 
         <button
           onClick={() => setOpen(false)}
           className="mt-6 px-6 py-2.5 rounded-xl bg-white text-slate-900 text-sm font-medium hover:scale-105 transition"
         >
-          ofcourse
+          Of course!
         </button>
       </div>
     </div>

@@ -29,6 +29,14 @@ const stats = [
     label: "Honest review",
     value: "sometimes you suck!",
   },
+  {
+    label: "Your handwriting",
+    value: "Maybe a secret code only you understand?",
+  },
+  {
+    label: "Immaturity level",
+    value: "works too hard but blushes out when ppl compliment",
+  },
 ];
 
 export default function RivalStats() {
@@ -66,12 +74,12 @@ export default function RivalStats() {
     <section className="relative min-h-screen text-slate-200 overflow-hidden px-6 py-24">
       
       {/* dreamy background wash */}
-      <div className="absolute inset-0 bg-gradient-to-b from-violet-950/20 via-transparent to-indigo-950/20 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-pink-900/20 via-transparent to-rose-950/20 pointer-events-none" />
 
       {/* cursor glow */}
       <div
         id="cursor-glow"
-        className="pointer-events-none fixed top-0 left-0 w-80 h-80 bg-violet-400/20 rounded-full blur-3xl z-0"
+        className="pointer-events-none fixed top-0 left-0 w-80 h-80 bg-pink-400/20 rounded-full blur-3xl z-0"
       />
 
       <div className="relative z-10 max-w-4xl mx-auto">
@@ -79,9 +87,9 @@ export default function RivalStats() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-center mb-14 bg-gradient-to-r from-violet-300 to-indigo-300 bg-clip-text text-transparent"
+          className="text-3xl md:text-4xl font-bold text-center mb-14 bg-gradient-to-r from-pink-300 to-fuchsia-300 bg-clip-text text-transparent"
         >
-         Analytics
+         Pros or cons?
         </motion.h2>
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -91,7 +99,7 @@ export default function RivalStats() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
-              className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:scale-[1.03] hover:bg-white/10 transition-all duration-300"
+              className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:scale-[1.03] hover:bg-pink-400/10 transition-all duration-300"
             >
               <p className="text-slate-400 text-sm">{stat.label}</p>
               <p className="text-2xl font-semibold mt-2">{stat.value}</p>
@@ -107,35 +115,28 @@ export default function RivalStats() {
             Real talk.
           </h2>
 
-
           <div className="mt-6 flex justify-center">
-          <div className="relative group">
-           <Image
-            src="/picture.jpeg"
-            alt="rival"
-            width={350}
-            height={350}
-            className="rounded-2xl object-cover border border-white/10 shadow-xl
-                 transition duration-500 group-hover:scale-105"
-      />
+            <div className="relative group">
+              <Image
+                src="/picture.jpeg"
+                alt="rival"
+                width={350}
+                height={350}
+                className="rounded-2xl object-cover border border-white/10 shadow-xl transition duration-500 group-hover:scale-105"
+              />
 
-      
+              {/* subtle glow */}
+              <div className="absolute inset-0 rounded-2xl bg-pink-400/10 blur-xl opacity-0 group-hover:opacity-100 transition" />
 
-      {/* subtle glow */}
-      <div className="absolute inset-0 rounded-2xl bg-violet-400/10 blur-xl opacity-0 group-hover:opacity-100 transition" />
-
-      <div
-      className="pointer-events-none absolute -bottom-6 left-1/2
-                 -translate-x-1/2 opacity-0 group-hover:opacity-100
-                 transition duration-300"
-      >
-      <span className="text-xs text-slate-400 italic">
-        what a nerd!
-      </span>
-     </div>
-     </div>
-
-      </div>
+              <div
+                className="pointer-events-none absolute -bottom-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <span className="text-xs text-slate-400 italic">
+                  what a nerd!
+                </span>
+              </div>
+            </div>
+          </div>
 
           <p className="mt-6 text-slate-300 leading-relaxed">
             I genuinely feel BLESSED that I got to know the version of you

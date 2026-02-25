@@ -25,13 +25,13 @@ export default function Hero() {
       <ParticlesBG />
 
       {/* soft dreamy wash */}
-      <div className="absolute inset-0 bg-gradient-to-b from-violet-950/30 via-transparent to-indigo-950/30 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-pink-900/30 via-transparent to-rose-950/30 pointer-events-none" />
 
       {/* glow orbs + memory shapes */}
       <div className="absolute inset-0 pointer-events-none">
         {/* big glow orbs */}
-        <div className="absolute top-24 left-24 w-80 h-80 bg-violet-400/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-24 right-24 w-80 h-80 bg-indigo-400/20 rounded-full blur-3xl" />
+        <div className="absolute top-24 left-24 w-80 h-80 bg-pink-400/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-24 right-24 w-80 h-80 bg-rose-400/20 rounded-full blur-3xl" />
 
         {/* subtle pulsing spotlight behind card */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -47,12 +47,12 @@ export default function Hero() {
         <motion.div
           animate={{ x: [0, -15, 15, 0], y: [0, 5, -5, 0] }}
           transition={{ repeat: Infinity, duration: 18, ease: "easeInOut" }}
-          className="absolute bottom-1/3 right-1/4 w-5 h-5 bg-indigo-300/20 rounded-full blur-sm"
+          className="absolute bottom-1/3 right-1/4 w-5 h-5 bg-rose-300/20 rounded-full blur-sm"
         />
         <motion.div
           animate={{ x: [0, 10, -10, 0], y: [0, -5, 5, 0] }}
           transition={{ repeat: Infinity, duration: 20, ease: "easeInOut" }}
-          className="absolute top-1/2 right-1/3 w-4 h-4 bg-violet-300/25 rounded-full blur-sm"
+          className="absolute top-1/2 right-1/3 w-4 h-4 bg-fuchsia-300/25 rounded-full blur-sm"
         />
       </div>
 
@@ -63,7 +63,7 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="relative z-10 text-center max-w-2xl bg-white/5 backdrop-blur-xl rounded-3xl p-10 border border-white/10 shadow-2xl hover:scale-[1.03] transition-transform duration-300"
       >
-        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-violet-300 to-indigo-300 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-pink-300 to-fuchsia-300 bg-clip-text text-transparent">
           HAPPIEST BIRTHDAY!
         </h1>
 
@@ -78,7 +78,7 @@ export default function Hero() {
         {/* personal interactive button */}
         <button
           onClick={togglePlay}
-          className="mt-6 px-4 py-2 bg-indigo-400/20 rounded-full text-slate-200 flex items-center gap-2 hover:bg-indigo-400/30 transition"
+          className="mt-6 px-4 py-2 bg-fuchsia-400/20 rounded-full text-slate-200 flex items-center gap-2 hover:bg-pink-400/30 transition"
         >
           🎵 {playing ? "Pause Message" : "to be honest"}
         </button>
