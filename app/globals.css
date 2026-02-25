@@ -39,3 +39,35 @@ body {
     ),
     #020617;
 }
+
+/* dreamy smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* subtle floating animation */
+@keyframes floatSlow {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradientBackground {
+  background-size: 200% 200%;
+  animation: gradientBackground 20s ease infinite;
+}
+
+@keyframes pulseSlow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 6s ease-in-out infinite;
+}
