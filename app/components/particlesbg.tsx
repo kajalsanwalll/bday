@@ -31,7 +31,7 @@ export default function ParticlesBG() {
             color: "#818cf8",
             distance: 150,
           },
-          move: { enable: true, speed: 1 },
+          move: { enable: true, speed: 0.6 },
           number: { value: 80 },
           opacity: { value: 0.6 },
           size: { value: 3 },
