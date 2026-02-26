@@ -19,7 +19,7 @@ const stats = [
   },
   {
     label: "Actual respect level",
-    value: "Tier 1",
+    value: "unasi percent (google it)",
   },
   {
     label: "Dual personality check?",
@@ -34,7 +34,7 @@ const stats = [
     value: "Maybe a secret code only you understand?",
   },
   {
-    label: "Immaturity level",
+    label: "Maturity level",
     value: "Works too hard but blushes out when ppl compliment",
   },
 ];
@@ -71,7 +71,7 @@ export default function RivalStats() {
   }, []);
 
   const handleFeedbackClick = () => {
-    setFeedbackText("Do you think I need your feedback? lol");
+    setFeedbackText("Do you think I need your feedback? LOL.");
   };
 
   return (
@@ -145,12 +145,16 @@ export default function RivalStats() {
           </p>
 
           <p className="mt-4 text-slate-300 leading-relaxed">
-            You're not great to that extent that I compare your kindness
-            with my top-tier God level energy… but yeah you're good at times.
+            You’re not exactly at my God-level kindness tier, 
+            so I wouldn’t even think of comparing you… but I’ll admit,
+             you're good at times.
           </p>
 
           <p className="mt-4 text-slate-300 leading-relaxed">
-            AND I love gossiping with you because you LISTEN and REMEMBER.
+            I kinda envy your accent. Guess I should just take classes from you.
+          </p>
+          <p className="mt-4 text-slate-300 leading-relaxed">
+            And I love gossiping with you because you LISTEN and REMEMBER.
           </p>
 
           <p className="mt-4 text-slate-400 leading-relaxed">

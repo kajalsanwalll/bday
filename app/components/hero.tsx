@@ -74,8 +74,8 @@ export default function Hero() {
         className="relative z-10 text-center max-w-2xl bg-white/5 backdrop-blur-xl rounded-3xl p-10 border border-white/10 shadow-2xl hover:scale-[1.03] transition-transform duration-300"
         onMouseEnter={startConfetti}
       >
-        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-pink-300 to-fuchsia-300 bg-clip-text text-transparent">
-          HAPPIEST BIRTHDAY!
+        <h1 className="text-4xl md:text-4xl font-bold bg-gradient-to-r from-pink-300 to-fuchsia-300 bg-clip-text text-transparent">
+          HAPPIEST BIRTHDAY NAMAI!
         </h1>
 
         <p className="mt-6 text-lg md:text-xl text-slate-300">
