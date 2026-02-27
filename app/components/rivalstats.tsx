@@ -71,7 +71,7 @@ export default function RivalStats() {
   }, []);
 
   const handleFeedbackClick = () => {
-    setFeedbackText("Do you think I need your feedback? LOL.");
+    setFeedbackText("Brave of you to think I need your feedback LOL.");
   };
 
   return (
