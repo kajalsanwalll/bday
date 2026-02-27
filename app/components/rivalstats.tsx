@@ -154,7 +154,7 @@ export default function RivalStats() {
             I kinda envy your accent. Guess I should just start taking classes from you.
           </p>
           <p className="mt-4 text-slate-300 leading-relaxed">
-            And I love gossiping with you because you LISTEN and REMEMBER.
+            And I love gossiping with you because you LISTEN and REMEMBER. That’s rare.
           </p>
 
           <p className="mt-4 text-slate-400 leading-relaxed">
@@ -162,6 +162,63 @@ export default function RivalStats() {
           </p>
         </div>
       </section>
+
+      {/* OBSERVATION TIMELINE */}
+<section className="relative z-10 mt-24">
+  <div className="mx-auto max-w-2xl rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 p-10 shadow-2xl">
+    
+    <motion.h3
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="text-2xl md:text-3xl font-semibold text-white tracking-tight mb-8"
+    >
+      Observation Timeline
+    </motion.h3>
+
+    <div className="space-y-6 text-slate-300">
+
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <p className="text-sm text-slate-400">First year</p>
+        <p className="text-lg">Who the fuck cares?</p>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+      >
+        <p className="text-sm text-slate-400">Second year</p>
+        <p className="text-lg">What a rebel lol.</p>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        <p className="text-sm text-slate-400">Kanha house session</p>
+        <p className="text-lg">Hmm. He might be nice.</p>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+      >
+        <p className="text-sm text-slate-400">After that</p>
+        <p className="text-lg font-medium text-white">
+          Whoa. He needs to be friend.
+        </p>
+      </motion.div>
+
+    </div>
+  </div>
+</section>
 
       {/* REVIEW SECTION */}
       <section className="relative z-10 mt-16">
