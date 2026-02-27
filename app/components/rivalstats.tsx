@@ -172,7 +172,7 @@ export default function RivalStats() {
             <div>
               <p className="text-sm text-slate-400">Now that i know u</p>
               <p className="text-lg font-medium text-white">
-                Additionally, you're good at DSP and consoling.
+                You're good at DSP and consoling.
               </p>
             </div>
           </div>
