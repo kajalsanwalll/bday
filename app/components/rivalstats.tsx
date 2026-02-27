@@ -180,16 +180,16 @@ export default function RivalStats() {
       </section>
 
      {/* REVIEW SECTION */}
-<section className="relative z-10 mt-16">
-  <div
-    onMouseEnter={() => setShowNarrator(true)}
-    onMouseLeave={() => setShowNarrator(false)}
-    onClick={() => setShowNarrator((prev) => !prev)}
-    className="mx-auto max-w-2xl rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 p-8 shadow-2xl text-center cursor-pointer"
-  >
-    <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
-      Honest Review
-    </h3>
+      <section className="relative z-10 mt-16">
+       <div
+        onMouseEnter={() => setShowNarrator(true)}
+        onMouseLeave={() => setShowNarrator(false)}
+        onClick={() => setShowNarrator((prev) => !prev)}
+        className="mx-auto max-w-2xl rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 p-8 shadow-2xl text-center cursor-pointer"
+       >
+       <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
+         Honest Review
+       </h3>
 
     {/* 👀 Narrator line */}
     <motion.p
@@ -272,42 +272,41 @@ export default function RivalStats() {
 </section>
       
       {/* 🎬 ELITE Bollywood vs Spider-Man Showdown */}
-<section className="relative z-10 mt-24">
-  <div className="mx-auto max-w-2xl rounded-3xl bg-gradient-to-br from-white/5 to-pink-900/10 backdrop-blur-xl border border-white/10 p-10 shadow-2xl text-center">
+     <section className="relative z-10 mt-24">
+      <div className="mx-auto max-w-2xl rounded-3xl bg-gradient-to-br from-white/5 to-pink-900/10 backdrop-blur-xl border border-white/10 p-10 shadow-2xl text-center">
 
-    <motion.h3
+     <motion.h3
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       className="text-2xl md:text-3xl font-semibold text-white mb-4"
-    >
+     >
       The Great Identity Crisis
-    </motion.h3>
+     </motion.h3>
 
-    <motion.p
+     <motion.p
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ delay: 0.3 }}
       className="text-slate-300 italic mb-6"
-    >
-      Bro thinks he's Spider-Man 🕷️  
-      but doesn’t know basic Bollywood lore.
-    </motion.p>
+     >
+      Bro thinks he's Spider-Man but doesn’t know basic Bollywood lore.
+     </motion.p>
 
-    <p className="text-slate-400 mb-6 text-sm">
+     <p className="text-slate-400 mb-6 text-sm">
       Question for the self-proclaimed multiverse traveler:
-    </p>
+     </p>
 
-    <p className="text-lg text-white mb-8 font-medium">
+     <p className="text-lg text-white mb-8 font-medium">
       “Bade bade deshon mein aisi chhoti chhoti baatein hoti rehti hain.”
-    </p>
+     </p>
 
-    <div className="flex flex-col gap-3 items-center mb-6">
+     <div className="flex flex-col gap-3 items-center mb-6">
       {[
         "Shah Rukh Khan",
         "Salman Khan",
         "Ranbir Kapoor",
-      ].map((option) => (
+       ].map((option) => (
         <button
           key={option}
           onClick={() => {
@@ -320,11 +319,11 @@ export default function RivalStats() {
             }
           }}
           className="px-6 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-pink-400/20 transition-all duration-300 hover:scale-105 active:scale-95"
-        >
+         >
           {option}
         </button>
       ))}
-    </div>
+     </div>
 
     {/* Energy Meter */}
     {energyLevel !== null && (
@@ -356,12 +355,9 @@ export default function RivalStats() {
           {bollywoodVerdict}
         </motion.p>
       </motion.div>
-    )}
-  </div>
-</section>
-      
-
-     
+     )}
+     </div>
+    </section>
 
       {/* FOOTER + KAJAL REVEAL */}
       <footer className="relative z-10 mt-32 pb-10 text-center">
@@ -395,9 +391,6 @@ export default function RivalStats() {
               transition={{ duration: 0.5 }}
               className="mt-6 flex flex-col items-center"
             >
-              <p className="text-pink-300 text-lg italic mb-4">
-                A whimsical baddie.
-              </p>
 
               <div
                 onClick={() => window.open("https://tenor.com/en-IN/view/i-was-just-kidding-ralphie-a-christmas-story-just-joking-jk-gif-19562592", "_blank")}
@@ -406,8 +399,8 @@ export default function RivalStats() {
                 <Image
                   src="/mypic.png"
                   alt="Kajal"
-                  width={250}
-                  height={250}
+                  width={150}
+                  height={150}
                   className="rounded-2xl object-cover border border-white/10 shadow-xl transition duration-500 group-hover:scale-105"
                 />
 
@@ -417,6 +410,9 @@ export default function RivalStats() {
                   </p>
                 </div>
               </div>
+              <p className="text-pink-300 mt-4 text-lg italic mb-4">
+                  A whimsical baddie.
+                 </p>
             </motion.div>
           )}
         </div>
