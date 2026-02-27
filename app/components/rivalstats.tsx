@@ -151,7 +151,7 @@ export default function RivalStats() {
           </p>
 
           <p className="mt-4 text-slate-300 leading-relaxed">
-            I kinda envy your accent. Guess I should just take classes from you.
+            I kinda envy your accent. Guess I should just start taking classes from you.
           </p>
           <p className="mt-4 text-slate-300 leading-relaxed">
             And I love gossiping with you because you LISTEN and REMEMBER.
