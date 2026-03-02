@@ -1,20 +1,17 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function BirthdayAlert() {
-  const [open, setOpen] = useState(false);
+  const [visible, setVisible] = useState(true);
   const [hoverCount, setHoverCount] = useState(0);
   const [escaped, setEscaped] = useState(false);
   const [coords, setCoords] = useState({ x: 0, y: 0 });
+
   const nahRef = useRef<HTMLButtonElement | null>(null);
 
-  useEffect(() => {
-    setOpen(true);
-  }, []);
-
-  if (!open) return null;
+  if (!visible) return null;
 
   const escalationMessages = [
     "You sure?",
@@ -58,6 +55,7 @@ export default function BirthdayAlert() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           className="absolute inset-0 bg-black/75 backdrop-blur-md"
         />
 
@@ -68,6 +66,7 @@ export default function BirthdayAlert() {
         <motion.div
           initial={{ opacity: 0, scale: 0.88, y: 24 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.9, y: 10 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="relative mx-4 w-full max-w-md text-center"
         >
@@ -116,7 +115,7 @@ export default function BirthdayAlert() {
               <div className="mt-7 flex justify-center gap-4 items-center">
                 {/* YES */}
                 <motion.button
-                  onClick={() => setOpen(false)}
+                  onClick={() => setVisible(false)}
                   animate={{ scale: yesScale }}
                   whileTap={{ scale: yesScale * 0.95 }}
                   className="px-6 py-2.5 rounded-full text-sm font-semibold text-white transition-all duration-200"
@@ -167,7 +166,7 @@ export default function BirthdayAlert() {
                 className="mt-7 flex justify-center"
               >
                 <button
-                  onClick={() => setOpen(false)}
+                  onClick={() => setVisible(false)}
                   className="px-6 py-2.5 rounded-full text-sm font-semibold text-white transition-all duration-200 hover:scale-105 active:scale-95"
                   style={{
                     background:
@@ -178,7 +177,7 @@ export default function BirthdayAlert() {
                       "1px solid rgba(255,255,255,0.15)",
                   }}
                 >
-                  She knows she's AAAmazing!
+                  She knows she is AAAmazing!
                 </button>
               </motion.div>
             )}
